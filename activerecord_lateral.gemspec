@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |s|
   s.name        = 'activerecord_lateral'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.authors     = ["Pavel Rosputko"]
   s.email         = ["author@domain.tld"]
   s.files       = ['lib/activerecord_lateral.rb']
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if s.respond_to?(:metadata)
-    s.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    s.metadata['allowed_push_host'] = "http://mygemserver.com"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
