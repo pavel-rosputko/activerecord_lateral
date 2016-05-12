@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |s|
   s.name        = 'activerecord_lateral'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
   s.authors     = ["Pavel Rosputko"]
   s.email         = ["author@domain.tld"]
   s.files       = ['lib/activerecord_lateral.rb']
