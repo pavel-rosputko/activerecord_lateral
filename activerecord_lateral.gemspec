@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-Gem::Specification.new do |s|
-  s.name        = 'activerecord_lateral'
-  s.version     = '0.0.2'
-  s.authors     = ["Pavel Rosputko"]
-  s.email         = ["author@domain.tld"]
-  s.files       = ['lib/activerecord_lateral.rb']
-  s.summary       = %q{summary}
-  s.description   = %q{longer description.}
-  s.homepage      = "https://github.com/smiley360/activerecord_lateral"
+Gem::Specification.new do |gem|
+  gem.name        = 'activerecord_lateral'
+  gem.version     = '0.0.2'
+  gem.authors     = ["Pavel Rosputko",'chris']
+  gem.email         = ["author@domain.tld"]
+  gem.files       = ['lib/activerecord_lateral.rb']
+  gem.description   = %q{longer description.}
+  gem.summary       = %q{summary}
+  gem.homepage      = "https://github.com/smiley360/activerecord_lateral"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -19,11 +19,12 @@ Gem::Specification.new do |s|
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
 
-  s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  s.bindir        = "exe"
-  s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  gem.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  gem.bindir        = "exe"
+  gem.executables   = gem.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ["lib"]
 
-  s.add_development_dependency "bundler", "~> 1.12"
-  s.add_development_dependency "rake", "~> 10.0"
+  gem.add_development_dependency "bundler", "~> 1.12"
+  gem.add_development_dependency "rake", "~> 10.0"
 end
